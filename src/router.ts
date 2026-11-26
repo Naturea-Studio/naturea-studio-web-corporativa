@@ -181,10 +181,24 @@ function updateTag(key: 'name' | 'property' | 'rel', label: string, value: strin
 router.afterEach((to) => {
   const title =
     to.path === '/'
-      ? 'Naturea Studio — Mobiliario y objetos de madera'
+      ? 'Naturea Studio | Bandeja de nogal y objetos de madera'
       : to.meta.title + ' | Naturea Studio'
+  const entryDescriptions: Record<string, string> = {
+    '/': 'Descubre una bandeja de nogal para las llaves y los objetos del recibidor. Compara la huella y explora los acabados de este concepto de Naturea Studio.',
+    '/decoracion':
+      'Explora bandejas, relojes y objetos de madera en estudio para el recibidor y otros espacios de la casa.',
+    '/productos/bandeja-decorativa':
+      'Bandeja decorativa de nogal para llaves y objetos pequeños. Prueba una huella en tu recibidor y compara referencias de acabado.',
+    '/materiales':
+      'Explora referencias de nogal, roble, olivo, resinas y acabados para los conceptos de Naturea Studio.',
+    '/colecciones':
+      'Descubre Essence, River, Organic y Signature, cuatro colecciones conceptuales de objetos y mobiliario en madera.',
+    '/a-medida':
+      'Explora formas, proporciones y materiales para una mesa de madera a medida con el configurador conceptual de Naturea Studio.',
+  }
   const description = String(
-    to.meta.description ||
+    entryDescriptions[to.path] ||
+      to.meta.description ||
       to.meta.title + ' en Naturea Studio, mobiliario y objetos de madera natural.',
   )
   const origin = (import.meta.env.VITE_SITE_URL || 'https://natureastudio.com').replace(/\/$/, '')
@@ -206,12 +220,37 @@ router.afterEach((to) => {
   updateTag('property', 'og:url', url)
   updateTag('property', 'og:type', 'website')
   updateTag('property', 'og:locale', 'es_ES')
+  const tray = to.path === '/productos/bandeja-decorativa'
+  document.querySelector('#product-breadcrumb-data')?.remove()
+  if (tray) {
+    const schema = document.createElement('script')
+    schema.type = 'application/ld+json'
+    schema.id = 'product-breadcrumb-data'
+    schema.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        ['Inicio', '/'],
+        ['Catálogo', '/productos'],
+        ['Bandejas', '/decoracion/bandejas'],
+        ['Bandeja decorativa', to.path],
+      ].map(([name, path], index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name,
+        item: origin + path,
+      })),
+    })
+    document.head.append(schema)
+  }
   updateTag(
     'property',
     'og:image',
     origin +
       '/images/' +
-      ((to.meta.image as typeof images.hero | undefined)?.key || 'hero') +
+      (to.path === '/'
+        ? 'bandeja-portada'
+        : (to.meta.image as typeof images.hero | undefined)?.key || 'hero') +
       '.webp',
   )
 })

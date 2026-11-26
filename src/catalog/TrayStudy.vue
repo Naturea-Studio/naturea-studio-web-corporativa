@@ -8,6 +8,7 @@ const measurements = ref({ surfaceLength: '', surfaceDepth: '', trayLength: '', 
 const rotated = ref(false)
 const stage = ref(false)
 const finish = ref(0)
+const interest = ref(false)
 const finishes = [
   {
     name: 'Mate',
@@ -83,6 +84,7 @@ function saveStudy() {
       'Huella probada: ' + length + ' × ' + depth + ' cm',
       'Referencia de acabado: ' + finishes[finish.value].name,
       report.value,
+      ...(interest.value ? ['Interés declarado: me plantearía probar un prototipo a 99 €.'] : []),
     ].join('\n'),
   )
   stage.value = true
@@ -169,6 +171,10 @@ function saveStudy() {
           >
         </fieldset>
         <p aria-live="polite">{{ finishes[finish].note }}</p>
+        <label class="tray-interest"
+          ><input v-model="interest" type="checkbox" /> Incluir en mi comparación que me plantearía
+          probar un prototipo a 99 €.</label
+        >
         <button class="button" type="button" :disabled="!ready" @click="saveStudy">
           Descargar mi comparación
         </button>
