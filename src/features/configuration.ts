@@ -18,14 +18,14 @@ export const models = {
     length: [140, 260],
     width: [75, 115],
     height: [70, 80],
-    base: 119000,
+    base: 68900,
   },
   centro: {
     name: 'Mesa de centro',
     length: [65, 140],
     width: [45, 85],
     height: [32, 48],
-    base: 39900,
+    base: 19900,
   },
 } as const
 export const defaults: TableStudy = {
@@ -35,7 +35,7 @@ export const defaults: TableStudy = {
   width: 90,
   height: 75,
   thickness: 4,
-  wood: 'roble',
+  wood: 'pino',
   resin: 'sin-resina',
   legs: 'madera',
   finish: 'mate',
@@ -85,7 +85,13 @@ export function estimateStudy(study: TableStudy) {
   return (
     models[study.model].base +
     Math.round((study.length * study.width) / 100) * 55 +
-    (study.wood === 'nogal' ? 18000 : study.wood === 'olivo' ? 25000 : 0) +
+    (study.wood === 'nogal'
+      ? 18000
+      : study.wood === 'olivo'
+        ? 25000
+        : study.wood === 'roble'
+          ? 9500
+          : 0) +
     (study.resin === 'sin-resina' ? 0 : 16000) +
     (study.legs === 'acero negro' ? 9000 : 0)
   )

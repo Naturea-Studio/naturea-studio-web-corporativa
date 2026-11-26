@@ -10,10 +10,10 @@ const issues = computed(() => validateStudy(study))
 const visual = computed(() =>
   study.resin !== 'sin-resina'
     ? study.model === 'centro'
-      ? images.river
-      : images.riverDining
+      ? images.pineRiver
+      : images.pineRiverDining
     : study.model === 'centro'
-      ? images.coffee
+      ? images.pineCoffee
       : images.hero,
 )
 const summary = computed(() =>
@@ -31,7 +31,7 @@ const summary = computed(() =>
 )
 const options = [
   { key: 'shape', name: 'Forma', items: ['ovalada', 'rectangular'] },
-  { key: 'wood', name: 'Madera', items: ['roble', 'nogal', 'olivo'] },
+  { key: 'wood', name: 'Madera', items: ['pino', 'roble', 'nogal', 'olivo'] },
   {
     key: 'resin',
     name: 'Resina',

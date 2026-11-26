@@ -1,6 +1,6 @@
 # Naturea Studio
 
-Prototipo de mobiliario y objetos de madera. La primera hipótesis comercial es una bandeja de nogal para recibidor o cómoda. El precio de estudio es 35 € y el presupuesto base del piloto es 390 €.
+Prototipo de mobiliario y objetos de madera. La primera hipótesis comercial es una bandeja de haya para recibidor o cómoda. El precio de estudio es 35 € y el presupuesto base del piloto es 390 €.
 
 - [Mercado y competencia](mercado-y-competencia.md)
 - [Costes y viabilidad](costes-y-viabilidad.md)

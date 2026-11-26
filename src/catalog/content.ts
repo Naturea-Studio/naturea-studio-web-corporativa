@@ -52,7 +52,7 @@ export const studies: Partial<Record<string, ProductStudy>> = {
     pending: 'Espesor, planitud, respuesta a la humedad y embalaje.',
     details: [
       ['Proceso en estudio', 'Corte repetible y canto suavizado'],
-      ['Material de partida', 'Retales de nogal seleccionados'],
+      ['Material de partida', 'Retales de haya seleccionados'],
     ],
   },
   'sujetalibros-de-nogal': {
@@ -90,7 +90,7 @@ export const studies: Partial<Record<string, ProductStudy>> = {
       ['Forma', 'Óvalo orgánico'],
       ['Uso previsto', 'Organización de objetos pequeños'],
     ],
-    detailImage: images.walnut,
+    detailImage: images.beech,
   },
   'reloj-de-pared': {
     intent: 'La esfera mantiene la veta a la vista y dos agujas oscuras marcan la lectura.',
@@ -102,13 +102,12 @@ export const studies: Partial<Record<string, ProductStudy>> = {
     detailImage: images.olive,
   },
   'mesa-de-centro': {
-    intent: 'Un tablero bajo de nogal con un contorno libre para acompañar una zona de estar.',
+    intent: 'Un tablero bajo de pino con un contorno libre para acompañar una zona de estar.',
     pending: 'Proporciones, resistencia de la superficie y estabilidad.',
     details: [
       ['Forma', 'Orgánica'],
       ['Estructura de estudio', 'Apoyos bajos de madera'],
     ],
-    detailImage: images.walnut,
   },
   'organizador-personal': {
     intent:
@@ -118,7 +117,7 @@ export const studies: Partial<Record<string, ProductStudy>> = {
       ['Formato', 'Rectangular'],
       ['Distribución', 'Compartimentos de distinta profundidad'],
     ],
-    detailImage: images.walnut,
+    detailImage: images.beech,
   },
   'estanteria-flotante': {
     intent: 'Un plano fino de roble deja todo el protagonismo a los objetos que sostiene.',
@@ -131,13 +130,12 @@ export const studies: Partial<Record<string, ProductStudy>> = {
   },
   'mesa-de-comedor': {
     intent:
-      'Tres tablas de nogal forman dos cauces de resina azul. El recorte irregular conserva la silueta de los cantos vivos.',
+      'Tres tablas de pino forman dos cauces de resina azul. El recorte irregular conserva la silueta de los cantos vivos.',
     pending: 'Medidas, separación de apoyos y viabilidad estructural para cada proyecto.',
     details: [
       ['Forma', 'Rectangular con canto vivo'],
-      ['Composición', 'Tres tablas de nogal, resina azul petróleo y base de acero negro'],
+      ['Composición', 'Tres tablas de pino, resina azul petróleo y base de acero negro'],
     ],
-    detailImage: images.riverBlue,
   },
   escritorio: {
     intent:
@@ -151,13 +149,12 @@ export const studies: Partial<Record<string, ProductStudy>> = {
   },
   'mesa-de-centro-river': {
     intent:
-      'La resina negra rellena el hueco entre dos tablas de nogal y conserva la forma irregular de sus cantos.',
+      'La resina negra rellena el hueco entre dos tablas de pino y conserva la forma irregular de sus cantos.',
     pending: 'Geometría del encuentro, proporciones, acabado y comportamiento de la unión.',
     details: [
       ['Forma', 'Ovalada'],
-      ['Composición', 'Nogal con resina negra mate'],
+      ['Composición', 'Pino con resina negra mate'],
     ],
-    detailImage: images.resin,
   },
 }
 export const collectionStories = [
@@ -173,7 +170,7 @@ export const collectionStories = [
     id: 'river',
     line: 'El cauce toma la forma de la madera',
     text: 'Se colocan dos o tres tablas con los cantos vivos enfrentados. La resina rellena los huecos a ras del tablero. Negro mate y azul petróleo son referencias de contraste. El tono, la transparencia y el dibujo se estudian para cada encargo.',
-    materialIds: ['nogal', 'resina'],
+    materialIds: ['pino', 'nogal', 'resina'],
     image: images.riverBlue,
     tone: 'river',
   },
@@ -181,7 +178,7 @@ export const collectionStories = [
     id: 'organic',
     line: 'Formas que conserva el árbol',
     text: 'Una curva de la tabla puede dictar todo el contorno. Organic recoge esa libertad en objetos pequeños y mesas de perfil irregular.',
-    materialIds: ['olivo', 'nogal'],
+    materialIds: ['haya', 'pino', 'olivo', 'nogal'],
     image: images.olive,
     tone: 'organic',
   },

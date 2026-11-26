@@ -2,12 +2,12 @@
 
 Las consultas son hipótesis de intención. Se desconoce su volumen y coste por clic. La demo permanece con `noindex, follow` en Vercel y las fichas conceptuales quedan fuera del sitemap. El sitemap de portada queda como base del lanzamiento y no se anuncia en el robots de la demo. La ficha de producto añade migas estructuradas y evita declarar oferta, stock, reseñas o prestaciones sin verificar.
 
-| Intención           | Consultas iniciales                                                           | Entrada y acción                                               |
-| ------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| Compra exploratoria | bandeja de nogal decorativa, bandeja de madera para llaves, bandeja recibidor | Ficha de bandeja. Comparar la huella y los acabados.           |
-| Inspiración         | objetos de madera para recibidor, decoración en nogal                         | Portada y decoración. Explorar la bandeja.                     |
-| Información         | acabado mate madera, nogal aceite natural                                     | Materiales y referencias de la ficha. Comparar veta y proceso. |
-| Encargo             | mesa de madera a medida, mesa nogal a medida                                  | Página a medida. Configurar y preparar borrador.               |
+| Intención           | Consultas iniciales                                                          | Entrada y acción                                               |
+| ------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Compra exploratoria | bandeja de haya decorativa, bandeja de madera para llaves, bandeja recibidor | Ficha de bandeja. Comparar la huella y los acabados.           |
+| Inspiración         | objetos de madera para recibidor, decoración en nogal                        | Portada y decoración. Explorar la bandeja.                     |
+| Información         | acabado mate madera, nogal aceite natural                                    | Materiales y referencias de la ficha. Comparar veta y proceso. |
+| Encargo             | mesa de madera a medida, mesa nogal a medida                                 | Página a medida. Configurar y preparar borrador.               |
 
 Portada, decoración, ficha, materiales, colecciones y a medida tienen títulos o descripciones específicos. La portada incluye etiquetas Open Graph en el HTML. En las rutas internas, Vue llena metadatos tras renderizar. Para difusión real, prerenderizar las entradas prioritarias para los robots sociales, ampliar sitemap con URLs verificadas y comprobar Search Console tras retirar el noindex del entorno comercial.
 

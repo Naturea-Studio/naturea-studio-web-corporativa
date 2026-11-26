@@ -15,8 +15,8 @@ const interest = ref(false)
 const finishes = [
   {
     name: 'Mate',
-    image: images.walnut,
-    note: 'Referencia de veta de nogal. El estudio mate busca reflejos discretos bajo luz lateral.',
+    image: images.beech,
+    note: 'Referencia de veta de haya. El estudio mate busca reflejos discretos bajo luz lateral.',
   },
   {
     name: 'Aceite natural',
@@ -81,7 +81,7 @@ function saveStudy() {
   downloadText(
     'naturea-estudio-bandeja.txt',
     [
-      'Naturea Studio · Estudio personal de la bandeja de nogal',
+      'Naturea Studio · Estudio personal de la bandeja de haya',
       'Medidas introducidas para comparar, sin medidas comerciales definitivas.',
       'Superficie: ' + surfaceLength + ' × ' + surfaceDepth + ' cm',
       'Huella probada: ' + length + ' × ' + depth + ' cm',

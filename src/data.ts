@@ -9,6 +9,17 @@ import type {
 } from './types'
 export const visual = (key: string, alt: string): ProductImage => ({ key, alt, conceptual: true })
 export const images = {
+  beech: visual('haya-detalle', 'Detalle del tono claro de la bandeja de haya'),
+  beechTray: visual('bandeja-haya', 'Bandeja ovalada de haya con una llave'),
+  beechCoasters: visual('posavasos-haya', 'Posavasos redondos de haya clara'),
+  beechValet: visual('organizador-haya', 'Organizador de haya con tres compartimentos'),
+  pineCoffee: visual('mesa-centro-pino', 'Mesa baja ovalada de pino'),
+  pineRiver: visual('river-centro-pino', 'Mesa baja de pino con cauce de resina negra'),
+  pineRiverDining: visual(
+    'river-comedor-pino',
+    'Mesa de comedor de pino con dos cauces azul petróleo',
+  ),
+
   nest: visual('mesas-nido-de-roble', 'Dos mesas nido de roble en un interior de piedra clara'),
   bedside: visual(
     'mesita-de-noche-de-roble',
@@ -69,7 +80,7 @@ export const collections: ProductCollection[] = [
     name: 'River',
     description:
       'Dos o tres tablas de canto vivo forman un tablero. La resina llena los huecos y dibuja uno o varios cauces.',
-    image: images.riverDining,
+    image: images.pineRiverDining,
   },
   {
     id: 'organic',
@@ -151,31 +162,31 @@ export const conceptProducts: Product[] = [
   concept(
     'bandeja-decorativa',
     'Bandeja decorativa',
-    'Nogal tallado con un perímetro orgánico para reunir pequeños objetos.',
+    'Haya con un vaciado sencillo y un borde suave para reunir llaves y pequeños objetos.',
     'bandejas',
     'organic',
-    'nogal',
-    images.tray,
+    'haya',
+    images.beechTray,
     35,
   ),
   concept(
     'organizador-personal',
     'Organizador personal',
-    'Compartimentos de nogal para el teléfono, las llaves y los objetos de bolsillo.',
+    'Compartimentos de haya para el teléfono, las llaves y los objetos de bolsillo.',
     'organizadores',
     'signature',
-    'nogal',
-    images.valet,
+    'haya',
+    images.beechValet,
     29,
   ),
   concept(
     'posavasos-de-nogal',
-    'Posavasos de nogal',
-    'Discos de nogal con el canto suavizado. El dibujo de cada uno depende del retal del que sale.',
+    'Posavasos de haya · Juego de 4',
+    'Discos de haya con el canto suavizado. El dibujo de cada uno depende del retal del que sale.',
     'posavasos',
     'organic',
-    'nogal',
-    images.coasters,
+    'haya',
+    images.beechCoasters,
     15,
   ),
   concept(
@@ -221,26 +232,26 @@ export const conceptProducts: Product[] = [
   concept(
     'mesa-de-centro',
     'Mesa de centro',
-    'Un tablero bajo de nogal con contorno irregular.',
+    'Un tablero bajo de pino con contorno irregular.',
     'mesas-de-centro',
     'organic',
-    'nogal',
-    images.coffee,
-    299,
+    'pino',
+    images.pineCoffee,
+    249,
   ),
   {
     ...concept(
       'mesa-de-centro-river',
       'Mesa de centro River',
-      'Dos tablas de nogal con cantos irregulares forman un tablero ovalado. La resina negra mate llena el hueco central.',
+      'Dos tablas de pino con cantos irregulares forman un tablero ovalado. La resina negra mate llena el hueco central.',
       'mesas-de-centro',
       'river',
-      'nogal',
-      images.river,
-      529,
+      'pino',
+      images.pineRiver,
+      449,
       'personalizado',
     ),
-    materialIds: ['nogal', 'resina'],
+    materialIds: ['pino', 'resina'],
   },
   {
     ...concept(
@@ -251,7 +262,7 @@ export const conceptProducts: Product[] = [
       'essence',
       'roble',
       images.console,
-      329,
+      299,
       'personalizado',
     ),
     materialIds: ['roble', 'metal'],
@@ -260,15 +271,15 @@ export const conceptProducts: Product[] = [
     ...concept(
       'mesa-de-comedor',
       'Mesa de comedor River',
-      'Tres tablas de nogal de canto vivo forman el tablero. Dos cauces de resina azul petróleo recorren los huecos sobre una base de acero negro.',
+      'Tres tablas de pino de canto vivo forman el tablero. Dos cauces de resina azul petróleo recorren los huecos sobre una base de acero negro.',
       'mesas-de-comedor',
       'river',
-      'nogal',
-      images.riverDining,
-      1990,
+      'pino',
+      images.pineRiverDining,
+      1290,
       'personalizado',
     ),
-    materialIds: ['nogal', 'resina', 'metal'],
+    materialIds: ['pino', 'resina', 'metal'],
   },
   concept(
     'escritorio',
@@ -290,7 +301,7 @@ export const conceptProducts: Product[] = [
     'essence',
     'roble',
     images.nest,
-    249,
+    239,
   ),
   concept(
     'mesita-de-noche-de-roble',
@@ -340,7 +351,7 @@ export const conceptProducts: Product[] = [
     'signature',
     'nogal',
     images.lamp,
-    129,
+    119,
   ),
   concept(
     'escultura-de-nogal',
@@ -354,6 +365,27 @@ export const conceptProducts: Product[] = [
   ),
 ]
 export const materials: Material[] = [
+  {
+    id: 'haya',
+    slug: 'haya',
+    name: 'Haya',
+    kind: 'madera',
+    description:
+      'Madera clara de veta fina. Es la base en estudio para bandejas y organizadores de formato pequeño.',
+    image: images.beech,
+    color: '#d8a66d',
+  },
+  {
+    id: 'pino',
+    slug: 'pino',
+    name: 'Pino',
+    kind: 'madera',
+    description:
+      'Madera de tono claro y veta marcada. Estamos estudiando la selección de tablas, la estabilidad y los acabados para mesas.',
+    image: images.pineCoffee,
+    color: '#d7ad75',
+  },
+
   {
     id: 'roble',
     slug: 'roble',

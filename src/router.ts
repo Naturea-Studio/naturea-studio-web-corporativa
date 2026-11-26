@@ -181,14 +181,14 @@ function updateTag(key: 'name' | 'property' | 'rel', label: string, value: strin
 router.afterEach((to) => {
   const title =
     to.path === '/'
-      ? 'Naturea Studio | Bandeja de nogal y objetos de madera'
+      ? 'Naturea Studio | Bandeja de haya y objetos de madera'
       : to.meta.title + ' | Naturea Studio'
   const entryDescriptions: Record<string, string> = {
-    '/': 'Descubre una bandeja de nogal para las llaves y los objetos del recibidor. Compara la huella y explora los acabados de este concepto de Naturea Studio.',
+    '/': 'Descubre una bandeja de haya para las llaves y los objetos del recibidor. Compara la huella y explora los acabados de este concepto de Naturea Studio.',
     '/decoracion':
       'Explora bandejas, relojes y objetos de madera en estudio para el recibidor y otros espacios de la casa.',
     '/productos/bandeja-decorativa':
-      'Bandeja decorativa de nogal para llaves y objetos pequeños. Prueba una huella en tu recibidor y compara referencias de acabado.',
+      'Bandeja decorativa de haya para llaves y objetos pequeños. Prueba una huella en tu recibidor y compara referencias de acabado.',
     '/materiales':
       'Explora referencias de nogal, roble, olivo, resinas y acabados para los conceptos de Naturea Studio.',
     '/colecciones':
@@ -249,7 +249,7 @@ router.afterEach((to) => {
     origin +
       '/images/' +
       (to.path === '/'
-        ? 'bandeja-portada'
+        ? 'bandeja-haya-portada'
         : (to.meta.image as typeof images.hero | undefined)?.key || 'hero') +
       '.webp',
   )

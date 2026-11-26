@@ -1,44 +1,25 @@
 # Costes y viabilidad
 
-Modelo por bandeja decorativa sin resina, venta directa en España. Las cifras son **estimaciones operativas**, excepto los precios de competidores en el documento de mercado. Se usa un factor fiscal hipotético de 1,21 para comparar escenarios. Todas las cifras están en euros. El precio de venta supuesto incluye entrega estándar. Se imputa el tiempo de fabricación aunque lo haga el fundador.
+Piloto de bandeja de haya, sin resina, con vaciado sencillo y precio de estudio de **35 €**. El envío se cotiza aparte. Son hipótesis internas para España, pendientes de cotizar y medir. Se supone un factor fiscal de 1,21 para comparar escenarios. El modelo cuenta la mano de obra del fundador.
 
-| Por unidad o pedido | Conservador | Base | Favorable |
-|---|---:|---:|---:|
-| Precio final supuesto | 89 | 99 | 109 |
-| Madera, abrasivo y acabado antes de merma | 16 | 12 | 10 |
-| Merma sobre materiales | 20 % | 15 % | 10 % |
-| Tiempo directo × coste hora | 1,25 × 26 | 0,85 × 24 | 0,65 × 22 |
-| Embalaje | 6 | 4,50 | 3,50 |
-| Envío | 10 | 8 | 6,50 |
-| Comisión sobre precio final + fijo | 3 % + 0,30 | 2,5 % + 0,30 | 2 % + 0,30 |
-| Provisión por devoluciones o daño | 7 | 4 | 2 |
-| Adquisición por pedido | 22 | 14 | 8 |
-| **Ingreso neto simulado** | **73,55** | **81,82** | **90,08** |
-| **Coste variable total** | **99,67** | **67,48** | **47,78** |
-| **Contribución por pedido** | **−26,12** | **14,34** | **42,30** |
-| **Margen sobre ingreso neto** | **−35,5 %** | **17,5 %** | **47,0 %** |
+| Por pedido                  |    Conservador |          Base |     Favorable |
+| --------------------------- | -------------: | ------------: | ------------: |
+| Precio supuesto             |           35 € |          35 € |          35 € |
+| Material con merma          |         6,60 € |        4,60 € |        3,30 € |
+| Tiempo directo × coste hora |  0,45 h × 24 € | 0,25 h × 24 € | 0,20 h × 22 € |
+| Embalaje                    |         3,00 € |        2,40 € |        1,90 € |
+| Comisión (2,5 % + 0,30 €)   |         1,18 € |        1,18 € |        1,18 € |
+| Devoluciones y daños        |         3,00 € |        2,00 € |        1,00 € |
+| Captación                   |         8,00 € |        5,00 € |        3,00 € |
+| Ingreso neto hipotético     |        28,93 € |       28,93 € |       28,93 € |
+| **Contribución**            |    **−3,65 €** |    **7,75 €** |   **14,15 €** |
+| Fijos mensuales imputados   |          210 € |         160 € |         120 € |
+| Equilibrio mensual          | Sin equilibrio |    21 pedidos |     9 pedidos |
 
-Cálculo con precisión completa. Ingreso neto = precio ÷ 1,21. Coste variable = materiales × (1 + merma) + horas × tarifa + embalaje + envío + comisión + provisión + captación. Contribución = ingreso neto − coste variable. Margen = contribución ÷ ingreso neto.
+Contribución = precio ÷ 1,21 − costes variables. El equilibrio redondea hacia arriba los fijos ÷ contribución, con precisión completa. Se presupone que los portes cobrados por separado cubren el coste neto de expedición. Falta validar portes, merma, manipulación, comisiones y tiempos con pedidos reales.
 
-| Coste operativo mensual (estimación) | Conservador | Base | Favorable |
-|---|---:|---:|---:|
-| Taller, herramientas y consumos fijos imputados | 110 | 80 | 60 |
-| Software y soporte | 40 | 30 | 20 |
-| Administración y mantenimiento | 60 | 50 | 40 |
-| **Total mensual** | **210** | **160** | **120** |
-| Pedidos al mes para cubrirlo | Sin equilibrio | 12 | 3 |
+**Piloto:** tres prototipos y un techo de 390 € ya estimado para útiles, documentación y pruebas de embalaje. Aceptar el objetivo de 35 € solo si el tiempo directo real se acerca a 15 minutos y la contribución supera 7 €. Para el juego de cuatro posavasos a 15 €, validar corte en lote y probar el envío conjunto con la bandeja.
 
-| Coste inicial del piloto | Conservador | Base | Favorable |
-|---|---:|---:|---:|
-| Prototipos, útiles y plantillas | 240 | 180 | 140 |
-| Fotografía y documentación | 140 | 100 | 80 |
-| Muestras, embalaje y envío de prueba | 140 | 110 | 80 |
-| **Total inicial** | **520** | **390** | **300** |
-| Pedidos/mes para recuperar el piloto en 3 meses | Sin equilibrio | 21 | 6 |
+Las mesas de pino parten de 249 € sin resina en formato de centro y de 449 € con un cauce. El comedor River parte de 1.290 €. Son precios objetivo. Se deben cotizar madera seca, resina, base, horas, embalaje, transporte y montaje antes de aceptar encargos.
 
-Equilibrio = redondeo hacia arriba de fijo mensual ÷ contribución. Para recuperar el piloto, se suma una tercera parte del coste inicial al fijo. El escenario presupone acceso al taller y herramientas. Quedan fuera maquinaria nueva, fiscalidad del beneficio y circulante.
-
-## Decisión
-
-Limitar el primer piloto a tres prototipos y un presupuesto base de **390 €**, sin activar compra. Cronometrar corte, lijado, acabado y embalaje, y pedir dos cotizaciones reales de envío. Continuar si la intención supera el umbral del estudio de mercado y una nueva prueba de costes confirma que el precio orientativo de 35 € deja margen. Las cifras del modelo de nogal corresponden al planteamiento anterior. Para estimar el margen a 35 €, hay que simplificar la pieza y volver a cotizar materiales y mano de obra. Si la merma, la mano de obra o el envío acercan el resultado al escenario conservador, simplificar el diseño y repetir costes antes de ampliar el catálogo.
-
+Referencias consultadas el 26 de noviembre de 2026. [Bandejas de Zara Home](https://www.zarahome.com/es/comedor-bandejas-n1040), [posavasos de Zara Home](https://www.zarahome.com/es/comedor-posavasos-n1044), [bandejas de IKEA](https://www.ikea.com/es/es/cat/bandejas-servir-16048/) y [tablero de pino de Leroy Merlin](https://www.leroymerlin.es/productos/tablero-alistonado-de-pino-macizo-18-mm-certificado-fsc-98285016.html). El tablero de referencia solo orienta el coste de material y no especifica tablas de canto vivo para River.
