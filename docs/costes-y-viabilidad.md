@@ -40,5 +40,5 @@ Equilibrio = redondeo hacia arriba de fijo mensual ÷ contribución. Para recupe
 
 ## Decisión
 
-Limitar el primer piloto a tres prototipos y un presupuesto base de **390 €**, sin activar compra. Cronometrar corte, lijado, acabado y embalaje, y pedir dos cotizaciones reales de envío. Continuar si la intención supera el umbral del estudio de mercado y la contribución prevista a 99 € se mantiene en al menos 14 € una vez sustituidas las estimaciones críticas. Si la merma, la mano de obra o el envío acercan el resultado al escenario conservador, simplificar el diseño y repetir costes antes de ampliar el catálogo.
+Limitar el primer piloto a tres prototipos y un presupuesto base de **390 €**, sin activar compra. Cronometrar corte, lijado, acabado y embalaje, y pedir dos cotizaciones reales de envío. Continuar si la intención supera el umbral del estudio de mercado y una nueva prueba de costes confirma que el precio orientativo de 35 € deja margen. Las cifras del modelo de nogal corresponden al planteamiento anterior. Para estimar el margen a 35 €, hay que simplificar la pieza y volver a cotizar materiales y mano de obra. Si la merma, la mano de obra o el envío acercan el resultado al escenario conservador, simplificar el diseño y repetir costes antes de ampliar el catálogo.
 

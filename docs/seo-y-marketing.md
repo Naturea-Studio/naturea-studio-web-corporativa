@@ -13,7 +13,7 @@ Portada, decoración, ficha, materiales, colecciones y a medida tienen títulos 
 
 ## Experimentos preparados
 
-1. **Prueba moderada.** Mensaje «Un lugar para las llaves al llegar». Mostrar la ficha y la herramienta a 8 personas. Aproximadamente 3 horas, 0 € de canal. Medir 5 comparaciones completas y 3 solicitudes voluntarias de seguimiento tras ver 99 €. La descarga local puede apoyar la observación. La aceptación se registra manualmente con permiso.
+1. **Prueba moderada.** Mensaje «Un lugar para las llaves al llegar». Mostrar la ficha y la herramienta a 8 personas. Aproximadamente 3 horas, 0 € de canal. Medir 5 comparaciones completas y 3 solicitudes voluntarias de seguimiento tras ver 35 €. La descarga local puede apoyar la observación. La aceptación se registra manualmente con permiso.
 2. **Publicación orgánica.** Comparar el render de uso en recibidor con un detalle de veta en dos publicaciones. Aproximadamente 2 horas, 0 € de pauta. Alternar orden y usar enlaces con `utm_source=instagram&utm_medium=organic&utm_campaign=piloto_bandeja&utm_content=recibidor` y `utm_content=veta`. Métrica inicial: 10 clics cualificados y 3 comparaciones observadas o comunicadas. Activar medición agregada solo tras validar la recogida de datos.
 3. **Entrevistas a interioristas.** Presentar el estudio a 3 profesionales, aproximadamente 2 horas y 0 € en canal. Éxito si 2 proponen un uso concreto y piden revisar muestra o ficha para un proyecto. La mesa de trabajo ya permite crear y descargar una ficha local.
 

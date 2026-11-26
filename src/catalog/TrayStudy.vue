@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { images } from '../data'
+import { conceptProducts, images, priceLabel } from '../data'
 import { downloadText } from '../features/storage'
 import EditorialImage from '../components/EditorialImage.vue'
+
+const trayPrice = conceptProducts.find((product) => product.slug === 'bandeja-decorativa')?.price
+const estimatedPrice = trayPrice ? priceLabel(trayPrice.subtotalCents, trayPrice.currency) : ''
 
 const measurements = ref({ surfaceLength: '', surfaceDepth: '', trayLength: '', trayDepth: '' })
 const rotated = ref(false)
@@ -84,7 +87,9 @@ function saveStudy() {
       'Huella probada: ' + length + ' × ' + depth + ' cm',
       'Referencia de acabado: ' + finishes[finish.value].name,
       report.value,
-      ...(interest.value ? ['Interés declarado: me plantearía probar un prototipo a 99 €.'] : []),
+      ...(interest.value && estimatedPrice
+        ? [`Interés declarado: me plantearía probar un prototipo a ${estimatedPrice}.`]
+        : []),
     ].join('\n'),
   )
   stage.value = true
@@ -171,9 +176,9 @@ function saveStudy() {
           >
         </fieldset>
         <p aria-live="polite">{{ finishes[finish].note }}</p>
-        <label class="tray-interest"
+        <label v-if="estimatedPrice" class="tray-interest"
           ><input v-model="interest" type="checkbox" /> Incluir en mi comparación que me plantearía
-          probar un prototipo a 99 €.</label
+          probar un prototipo a {{ estimatedPrice }}.</label
         >
         <button class="button" type="button" :disabled="!ready" @click="saveStudy">
           Descargar mi comparación

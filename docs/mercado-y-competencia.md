@@ -24,6 +24,6 @@ Priorizar particulares en España que ya buscan un objeto de recibidor o un rega
 
 - Reclutar 8 personas que hayan comprado recientemente decoración o estén buscando organizar un recibidor. Mostrar primero su alternativa habitual y luego la bandeja con precio de estudio.
 - Preguntar qué guardarían, dónde, cuánto espacio tienen, qué acabado elegirían, cómo compararían alternativas y qué les impediría decidir.
-- Continuar si al menos 5 de 8 entienden el uso y pueden indicar dónde la colocarían, y al menos 3 aceptan un seguimiento voluntario después de ver 99 €. Una intención declarada exige una segunda prueba con prototipo real.
+- Continuar si al menos 5 de 8 entienden el uso y pueden indicar dónde la colocarían, y al menos 3 aceptan un seguimiento voluntario después de ver 35 €. Una intención declarada exige una segunda prueba con prototipo real.
 - Entrevistar a 3 interioristas. Continuar esa vía si 2 piden revisar muestras o una ficha concreta para un proyecto real. El reclutamiento y las entrevistas siguen pendientes.
 
