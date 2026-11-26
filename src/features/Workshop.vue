@@ -176,8 +176,7 @@ function csv() {
         </div>
         <p v-if="!rows.length">No hay lotes para este estado.</p>
         <article v-for="item in rows" :key="item.id" class="demo-line">
-          <strong>{{ item.reference }}</strong
-          ><span
+          <strong>{{ item.reference }}</strong><span
             >{{ item.units }} ud. · {{ item.stage }} ·
             {{ priceLabel(item.units * item.unitCost, 'EUR') }}</span
           ><button type="button" class="text-link" @click="edit(item)">Editar</button>

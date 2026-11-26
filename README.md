@@ -23,10 +23,15 @@ Copia `.env.example` a `.env.local` para ajustar la URL canónica. La indexació
 
 `npm run build` genera `dist/`. El despliegue de prueba usa Vercel con configuración versionada. La configuración comercial del dominio se reservará para una fase posterior.
 
+## Alcance de la demo
+
+La demo incluye configurador, galería conceptual, simulación de pedidos, mesa de trabajo profesional y presentación internacional. Los datos de prueba se guardan en el dispositivo. Las operaciones de taller se pueden probar en desarrollo en la ruta `/taller/operaciones`.
+
 ## Documentación
 
 - [Proyecto](docs/PROJECT.md), [negocio](docs/BUSINESS.md), [mercado](docs/MARKET.md) y [marca](docs/BRAND.md).
 - [Arquitectura](docs/ARCHITECTURE.md), [sistema de diseño](docs/DESIGN-SYSTEM.md) y [decisiones](docs/DECISIONS.md).
 - [Catálogo](docs/CATALOG.md), [colecciones](docs/COLLECTIONS.md) y [materiales](docs/MATERIALS.md).
 - [Configurador y proyectos](docs/CONFIGURATOR.md), [piezas únicas](docs/UNIQUE-PIECES.md) y [profesionales](docs/PROFESSIONAL.md).
-- [Roadmap](docs/ROADMAP.md).
+- [Roadmap](docs/ROADMAP.md), [ecommerce de prueba](docs/COMMERCE.md), [operaciones](docs/OPERATIONS.md) y [expansión](docs/EXPANSION.md).
+

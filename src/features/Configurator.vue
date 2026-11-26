@@ -2,6 +2,7 @@
 import { computed, reactive } from 'vue'
 import { images, priceLabel } from '../data'
 import EditorialImage from '../components/EditorialImage.vue'
+import TablePlan from './TablePlan.vue'
 import { defaults, estimateStudy, models, validateStudy } from './configuration'
 const study = reactive({ ...defaults })
 const model = computed(() => models[study.model])
@@ -62,6 +63,7 @@ function changeModel() {
         <p class="feature-muted">
           Referencia visual de la familia de diseño. La imagen ilustra materiales y ambiente.
         </p>
+        <TablePlan v-if="!issues.length" :study="study" />
       </div>
       <div>
         <div class="feature-fields">

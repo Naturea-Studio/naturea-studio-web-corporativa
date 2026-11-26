@@ -67,7 +67,10 @@ const legal = [
       </nav>
     </div>
     <div class="wrap footer-bottom">
-      <span>© {{ new Date().getFullYear() }} Naturea Studio</span>
+      <span
+        >© {{ new Date().getFullYear() }} Naturea Studio ·
+        <RouterLink to="/internacional">English / Français</RouterLink></span
+      >
       <nav aria-label="Información legal">
         <RouterLink v-for="[label, path] in legal" :key="path" :to="'/legal/' + path">{{
           label
