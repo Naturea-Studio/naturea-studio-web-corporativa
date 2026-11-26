@@ -5,6 +5,7 @@ const catalog = () => import('./catalog/Catalog.vue')
 const collectionView = () => import('./catalog/Collections.vue')
 const productView = () => import('./catalog/ProductDetail.vue')
 const catalogPages = ['productos', 'mobiliario', 'decoracion', 'buscar', 'favoritos']
+const configurator = () => import('./features/Configurator.vue')
 const page = () => import('./views/Page.vue')
 const directory = {
   colecciones: 'Colecciones',
@@ -77,7 +78,13 @@ export const router = createRouter({
     ...Object.entries(directory).map(([slug, title]) => ({
       path: '/' + slug,
       component:
-        slug === 'colecciones' ? collectionView : catalogPages.includes(slug) ? catalog : page,
+        slug === 'configurador'
+          ? configurator
+          : slug === 'colecciones'
+            ? collectionView
+            : catalogPages.includes(slug)
+              ? catalog
+              : page,
       meta: { title },
     })),
     ...detailRoutes.map((item) => ({

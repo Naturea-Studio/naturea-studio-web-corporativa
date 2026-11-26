@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+const route = useRoute()
 const complete = ref(false)
 function download(event: SubmitEvent) {
   const form = event.currentTarget as HTMLFormElement
@@ -61,7 +63,17 @@ function download(event: SubmitEvent) {
     <label>Provincia <input name="Provincia" autocomplete="address-level2" /></label>
     <label>Fecha deseada <input name="Fecha" type="date" /></label>
     <label class="full"
-      >Describe el proyecto <textarea name="Descripción" rows="5" required />
+      >Describe el proyecto
+      <textarea
+        name="Descripción"
+        rows="5"
+        :value="
+          typeof route.query.configuracion === 'string'
+            ? route.query.configuracion.slice(0, 500)
+            : undefined
+        "
+        required
+      />
     </label>
     <div class="full">
       <button class="button" type="submit">Descargar borrador</button>
