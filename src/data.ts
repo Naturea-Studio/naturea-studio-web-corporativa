@@ -71,6 +71,7 @@ const furniture = [
 ]
 const decor = [
   'Bandejas',
+  'Posavasos',
   'Relojes',
   'Organizadores',
   'Cuadros',
@@ -100,8 +101,9 @@ const concept = (
   category: string,
   collection: string,
   material: string,
-  image: ProductImage,
+  image?: ProductImage,
   euros?: number,
+  manufacturing: Product['manufacturing'] = 'serie',
 ): Product => ({
   id: slug,
   slug,
@@ -113,20 +115,11 @@ const concept = (
   image,
   availability: 'concepto',
   publicStatus: 'Concepto en desarrollo',
-  manufacturing: euros ? 'serie' : 'personalizado',
+  manufacturing,
   ...(euros ? { price: { currency: 'EUR', subtotalCents: euros * 100, estimate: true } } : {}),
 })
-export const conceptProducts = [
-  concept(
-    'mesa-auxiliar',
-    'Mesa auxiliar',
-    'Una silueta redonda sobre una base de roble con un perfil escultórico.',
-    'mesas-auxiliares',
-    'essence',
-    'roble',
-    images.side,
-    199,
-  ),
+// Prototyping order follows docs/gama-y-fabricacion.md.
+export const conceptProducts: Product[] = [
   concept(
     'bandeja-decorativa',
     'Bandeja decorativa',
@@ -136,26 +129,6 @@ export const conceptProducts = [
     'nogal',
     images.tray,
     99,
-  ),
-  concept(
-    'reloj-de-pared',
-    'Reloj de pared',
-    'Una esfera de olivo que deja la veta a la vista.',
-    'relojes',
-    'organic',
-    'olivo',
-    images.clock,
-    99,
-  ),
-  concept(
-    'mesa-de-centro',
-    'Mesa de centro',
-    'Un tablero bajo de nogal con contorno irregular.',
-    'mesas-de-centro',
-    'organic',
-    'nogal',
-    images.coffee,
-    399,
   ),
   concept(
     'organizador-personal',
@@ -168,6 +141,32 @@ export const conceptProducts = [
     59,
   ),
   concept(
+    'posavasos-de-nogal',
+    'Posavasos de nogal',
+    'Discos de nogal con el canto suavizado. El dibujo de cada uno depende del retal del que sale.',
+    'posavasos',
+    'organic',
+    'nogal',
+  ),
+  concept(
+    'sujetalibros-de-nogal',
+    'Sujetalibros de nogal',
+    'Dos bloques de nogal con una cara plana junto a los libros y un corte oblicuo hacia el exterior.',
+    'sujetalibros',
+    'signature',
+    'nogal',
+  ),
+  concept(
+    'reloj-de-pared',
+    'Reloj de pared',
+    'Una esfera de olivo que deja la veta a la vista.',
+    'relojes',
+    'organic',
+    'olivo',
+    images.clock,
+    99,
+  ),
+  concept(
     'estanteria-flotante',
     'Estantería flotante',
     'Una repisa de roble de líneas limpias para dar espacio a los objetos de cada día.',
@@ -178,6 +177,54 @@ export const conceptProducts = [
     89,
   ),
   concept(
+    'mesa-auxiliar',
+    'Mesa auxiliar',
+    'Una silueta redonda sobre una base de roble con un perfil escultórico.',
+    'mesas-auxiliares',
+    'essence',
+    'roble',
+    images.side,
+    199,
+  ),
+  concept(
+    'mesa-de-centro',
+    'Mesa de centro',
+    'Un tablero bajo de nogal con contorno irregular.',
+    'mesas-de-centro',
+    'organic',
+    'nogal',
+    images.coffee,
+    399,
+  ),
+  {
+    ...concept(
+      'mesa-de-centro-river',
+      'Mesa de centro River',
+      'Un tablero ovalado de nogal atravesado por un cauce estrecho de resina negra mate.',
+      'mesas-de-centro',
+      'river',
+      'nogal',
+      images.river,
+      undefined,
+      'personalizado',
+    ),
+    materialIds: ['nogal', 'resina'],
+  },
+  {
+    ...concept(
+      'consola-roble-acero',
+      'Consola de roble y acero',
+      'Un tablero de roble sobre una estructura de acero para el recibidor.',
+      'consolas',
+      'essence',
+      'roble',
+      undefined,
+      undefined,
+      'personalizado',
+    ),
+    materialIds: ['roble', 'metal'],
+  },
+  concept(
     'mesa-de-comedor',
     'Mesa de comedor',
     'Una mesa de nogal de proporciones generosas, pensada para explorar medidas a pedido.',
@@ -185,6 +232,8 @@ export const conceptProducts = [
     'signature',
     'nogal',
     images.hero,
+    undefined,
+    'personalizado',
   ),
   concept(
     'escritorio',
@@ -194,21 +243,10 @@ export const conceptProducts = [
     'signature',
     'nogal',
     images.desk,
+    undefined,
+    'personalizado',
   ),
 ]
-conceptProducts.push({
-  ...concept(
-    'mesa-de-centro-river',
-    'Mesa de centro River',
-    'Un tablero ovalado de nogal atravesado por un cauce estrecho de resina negra mate.',
-    'mesas-de-centro',
-    'river',
-    'nogal',
-    images.river,
-  ),
-  manufacturing: 'serie',
-  materialIds: ['nogal', 'resina'],
-})
 export const materials: Material[] = [
   {
     id: 'roble',

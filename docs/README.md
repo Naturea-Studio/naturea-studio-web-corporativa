@@ -9,3 +9,6 @@ Prototipo de mobiliario y objetos de madera. La primera hipótesis comercial es 
 - [Roadmap de validación](ROADMAP.md)
 - [Apertura técnica, Supabase y reservas](STORE-LAUNCH.md)
 - [Arquitectura](ARCHITECTURE.md) y [sistema de diseño](DESIGN-SYSTEM.md)
+
+- [Inventario de mercado español y europeo](inventario-mercado.md)
+- [Gama y prioridad de fabricación](gama-y-fabricacion.md)

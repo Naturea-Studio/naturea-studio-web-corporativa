@@ -20,10 +20,11 @@ const isTray = computed(() => props.product.slug === 'bandeja-decorativa')
 const study = computed(() => studies[props.product.id])
 const collection = computed(() => collections.find((item) => item.id === props.product.collection))
 const category = computed(() => categories.find((item) => item.id === props.product.category))
-const gallery = computed(() => [
-  props.product.image,
-  ...(study.value?.detailImage ? [study.value.detailImage] : []),
-])
+const gallery = computed(() =>
+  props.product.image
+    ? [props.product.image, ...(study.value?.detailImage ? [study.value.detailImage] : [])]
+    : [],
+)
 const related = computed(() => relatedProducts(props.product))
 const saved = computed(() => favorites.ids.includes(props.product.id))
 function move(distance: number) {
@@ -41,8 +42,9 @@ function move(distance: number) {
       ><span v-if="category" aria-hidden="true">/</span
       ><span aria-current="page">{{ product.name }}</span>
     </nav>
-    <div class="product-detail">
+    <div class="product-detail" :class="{ 'product-detail-text': !gallery.length }">
       <section
+        v-if="gallery.length"
         class="product-gallery"
         aria-label="Galería conceptual"
         @keydown.left.prevent="move(-1)"

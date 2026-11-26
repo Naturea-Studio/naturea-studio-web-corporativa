@@ -8,6 +8,31 @@ type ProductStudy = {
   detailImage?: ProductImage
 }
 export const studies: Partial<Record<string, ProductStudy>> = {
+  'posavasos-de-nogal': {
+    intent: 'Repetir un contorno con retales aptos y conservar el dibujo de la veta en cada pieza.',
+    pending: 'Espesor, planitud, respuesta a la humedad y embalaje.',
+    details: [
+      ['Proceso en estudio', 'Corte repetible y canto suavizado'],
+      ['Material de partida', 'Retales de nogal seleccionados'],
+    ],
+  },
+  'sujetalibros-de-nogal': {
+    intent: 'Dos bloques con apoyo plano y una cara oblicua que deja la veta a la vista.',
+    pending: 'Peso, adherencia, estabilidad frente al empuje y protección de aristas.',
+    details: [
+      ['Formato en estudio', 'Dos bloques'],
+      ['Proceso en estudio', 'Corte oblicuo y acabado común con la bandeja'],
+    ],
+  },
+  'consola-roble-acero': {
+    intent:
+      'Separar tablero y estructura para poder estudiar la consola según el espacio del encargo.',
+    pending: 'Sección, anclaje, unión madera-acero, estabilidad y transporte.',
+    details: [
+      ['Uso previsto', 'Recibidor'],
+      ['Montaje en estudio', 'Tablero separado de la estructura'],
+    ],
+  },
   'mesa-auxiliar': {
     intent:
       'La base concentra el peso visual y deja libre el borde del tablero. La escala está pensada para acompañar un sofá o un sillón.',

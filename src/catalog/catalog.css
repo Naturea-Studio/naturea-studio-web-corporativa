@@ -377,3 +377,29 @@
 .gallery-stage:has(img[width='1536']) .editorial-image {
   aspect-ratio: 1.5;
 }
+
+.product-card-text {
+  width: 100%;
+  min-width: 0;
+  min-height: 10rem;
+  aspect-ratio: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.4rem;
+  padding: clamp(0.7rem, 3vw, 2.25rem);
+  background: #e8dfd0;
+}
+.product-card-text span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 750;
+}
+.product-card-text p {
+  color: var(--ink);
+  font: 570 clamp(1rem, 2.5vw, 2.15rem)/1.02 var(--serif);
+}
+.product-detail.product-detail-text {
+  display: block;
+  max-width: 52rem;
+}

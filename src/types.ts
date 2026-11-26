@@ -102,7 +102,7 @@ export interface Product extends Content {
   category: string
   collection: string
   materialIds: string[]
-  image: ProductImage
+  image?: ProductImage
   price?: PriceBreakdown
   availability: ProductAvailability
   publicStatus: string

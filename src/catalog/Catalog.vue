@@ -153,8 +153,8 @@ const results = computed(() => {
         <h1>{{ route.meta.title }}</h1>
       </div>
       <p v-if="shop">
-        Estudios de mobiliario y objetos en madera. Las imágenes muestran propuestas de diseño y los
-        importes son orientativos.
+        Estudios de mobiliario y objetos en madera, desde los candidatos al primer lote hasta los
+        encargos. Las imágenes muestran propuestas de diseño y los importes son orientativos.
       </p>
       <p v-else>Las piezas que guardas quedan en este navegador para que puedas volver a ellas.</p>
     </header>
@@ -177,7 +177,7 @@ const results = computed(() => {
       ></label>
       <label class="catalog-order"
         >Orden<select :value="query('orden')" @change="onChange('orden', $event)">
-          <option value="">Relevancia</option>
+          <option value="">Prioridad de prototipado</option>
           <option value="asc">Menor precio</option>
           <option value="desc">Mayor precio</option>
           <option value="nombre">Nombre, A–Z</option>

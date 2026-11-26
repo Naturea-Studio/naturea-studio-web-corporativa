@@ -10,7 +10,11 @@ const favorites = useFavorites()
 <template>
   <article class="product-card">
     <RouterLink :to="'/productos/' + product.slug">
-      <EditorialImage :image="product.image" />
+      <EditorialImage v-if="product.image" :image="product.image" />
+      <div v-else class="product-card-text">
+        <span>Ficha de estudio</span>
+        <p>{{ product.description }}</p>
+      </div>
       <div class="product-title">
         <h3>{{ product.name }}</h3>
         <span v-if="product.price" class="price"
