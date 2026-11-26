@@ -176,6 +176,7 @@ export const conceptProducts: Product[] = [
     'organic',
     'nogal',
     images.coasters,
+    39,
   ),
   concept(
     'sujetalibros-de-nogal',
@@ -185,6 +186,7 @@ export const conceptProducts: Product[] = [
     'signature',
     'nogal',
     images.bookends,
+    79,
   ),
   concept(
     'reloj-de-pared',
@@ -235,7 +237,7 @@ export const conceptProducts: Product[] = [
       'river',
       'nogal',
       images.river,
-      undefined,
+      649,
       'personalizado',
     ),
     materialIds: ['nogal', 'resina'],
@@ -249,7 +251,7 @@ export const conceptProducts: Product[] = [
       'essence',
       'roble',
       images.console,
-      undefined,
+      449,
       'personalizado',
     ),
     materialIds: ['roble', 'metal'],
@@ -263,7 +265,7 @@ export const conceptProducts: Product[] = [
       'river',
       'nogal',
       images.riverDining,
-      undefined,
+      2490,
       'personalizado',
     ),
     materialIds: ['nogal', 'resina', 'metal'],
@@ -276,7 +278,7 @@ export const conceptProducts: Product[] = [
     'signature',
     'nogal',
     images.desk,
-    undefined,
+    890,
     'personalizado',
   ),
 
@@ -288,6 +290,7 @@ export const conceptProducts: Product[] = [
     'essence',
     'roble',
     images.nest,
+    329,
   ),
   concept(
     'mesita-de-noche-de-roble',
@@ -297,6 +300,7 @@ export const conceptProducts: Product[] = [
     'essence',
     'roble',
     images.bedside,
+    249,
   ),
   concept(
     'banco-de-roble',
@@ -306,6 +310,7 @@ export const conceptProducts: Product[] = [
     'essence',
     'roble',
     images.bench,
+    349,
   ),
   concept(
     'cuadro-relieve-de-nogal',
@@ -315,6 +320,7 @@ export const conceptProducts: Product[] = [
     'organic',
     'nogal',
     images.relief,
+    149,
   ),
   concept(
     'espejo-con-marco-de-roble',
@@ -324,6 +330,7 @@ export const conceptProducts: Product[] = [
     'essence',
     'roble',
     images.mirror,
+    239,
   ),
   concept(
     'lampara-de-sobremesa-de-nogal',
@@ -333,6 +340,7 @@ export const conceptProducts: Product[] = [
     'signature',
     'nogal',
     images.lamp,
+    189,
   ),
   concept(
     'escultura-de-nogal',
@@ -342,6 +350,7 @@ export const conceptProducts: Product[] = [
     'organic',
     'nogal',
     images.sculpture,
+    119,
   ),
 ]
 export const materials: Material[] = [

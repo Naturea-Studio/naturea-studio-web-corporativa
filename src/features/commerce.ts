@@ -33,6 +33,16 @@ const isOrder = (value: unknown): value is TestOrder =>
       row.quantity > 0 &&
       integer(row.unit),
   )
+const testCartIds = new Set([
+  'bandeja-decorativa',
+  'organizador-personal',
+  'reloj-de-pared',
+  'estanteria-flotante',
+  'mesa-auxiliar',
+  'mesa-de-centro',
+])
+export const canAddToTestCart = (id: string) => testCartIds.has(id)
+
 export const useCommerce = defineStore('test-commerce', () => {
   const { data: cart, writable: cartWritable } = useLocalRecord(
     'naturea-test-cart',
@@ -49,7 +59,10 @@ export const useCommerce = defineStore('test-commerce', () => {
   )
   const lines = computed(() =>
     conceptProducts.flatMap((item) =>
-      item.price && Object.hasOwn(cart.value, item.id) && cart.value[item.id] > 0
+      canAddToTestCart(item.id) &&
+      item.price &&
+      Object.hasOwn(cart.value, item.id) &&
+      cart.value[item.id] > 0
         ? [
             {
               id: item.id,
@@ -66,7 +79,7 @@ export const useCommerce = defineStore('test-commerce', () => {
   )
   function set(id: string, quantity: number) {
     if (
-      !conceptProducts.some((item) => item.id === id && item.price) ||
+      !conceptProducts.some((item) => item.id === id && canAddToTestCart(id) && item.price) ||
       !Number.isSafeInteger(quantity)
     )
       return

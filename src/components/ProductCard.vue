@@ -18,7 +18,8 @@ const favorites = useFavorites()
       <div class="product-title">
         <h3>{{ product.name }}</h3>
         <span v-if="product.price" class="price"
-          >{{ priceLabel(product.price.subtotalCents, product.price.currency) }} aprox.</span
+          >{{ product.manufacturing === 'personalizado' ? 'Desde ' : ''
+          }}{{ priceLabel(product.price.subtotalCents, product.price.currency) }} aprox.</span
         >
       </div>
       <p>

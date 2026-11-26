@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import { ChevronLeft, ChevronRight, Heart } from 'lucide-vue-next'
 import { collections, categories, priceLabel } from '../data'
 import { useFavorites } from '../stores'
-import { useCommerce } from '../features/commerce'
+import { canAddToTestCart, useCommerce } from '../features/commerce'
 import type { Product } from '../types'
 import { materialsFor, relatedProducts, studies } from './content'
 import EditorialImage from '../components/EditorialImage.vue'
@@ -99,6 +99,7 @@ function move(distance: number) {
         <p>{{ product.description }}</p>
         <div class="product-estimate">
           <strong v-if="product.price">{{
+            (product.manufacturing === 'personalizado' ? 'Desde ' : '') +
             priceLabel(product.price.subtotalCents, product.price.currency)
           }}</strong><span>{{ product.price ? 'Precio orientativo' : 'Precio por definir' }}</span>
         </div>
@@ -132,7 +133,7 @@ function move(distance: number) {
             >Explorar a medida</RouterLink
           >
         </div>
-        <div v-if="product.price && !isTray" class="page-links">
+        <div v-if="product.price && !isTray && canAddToTestCart(product.id)" class="page-links">
           <button
             class="text-link"
             type="button"
