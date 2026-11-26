@@ -118,6 +118,15 @@ export const router = createRouter({
         image: 'image' in item ? item.image : undefined,
       },
     })),
+    ...(import.meta.env.DEV
+      ? [
+          {
+            path: '/taller/operaciones',
+            component: () => import('./features/Workshop.vue'),
+            meta: { title: 'Operaciones de taller' },
+          },
+        ]
+      : []),
     ...journal.map((item) => ({
       path: '/journal/' + item.slug,
       component: page,

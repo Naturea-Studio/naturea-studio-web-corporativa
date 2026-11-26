@@ -179,8 +179,12 @@ function exportBoard(item: Board) {
         <h2>Proyectos guardados</h2>
         <p v-if="!boards.length">Todavía no hay proyectos en este dispositivo.</p>
         <article v-for="item in boards" :key="item.id" class="demo-line">
-          <strong>{{ item.name }}</strong
-          ><button class="text-link" type="button" @click="load(item)">Editar</button
+          <strong>{{ item.name }}</strong><button
+            class="text-link"
+            type="button"
+            @click="load(item)"
+          >
+            Editar</button
           ><button class="text-link" type="button" @click="exportBoard(item)">
             Descargar ficha
           </button>
