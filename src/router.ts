@@ -5,6 +5,7 @@ const catalog = () => import('./catalog/Catalog.vue')
 const collectionView = () => import('./catalog/Collections.vue')
 const productView = () => import('./catalog/ProductDetail.vue')
 const catalogPages = ['productos', 'mobiliario', 'decoracion', 'buscar', 'favoritos']
+const piecesView = () => import('./features/Pieces.vue')
 const configurator = () => import('./features/Configurator.vue')
 const page = () => import('./views/Page.vue')
 const directory = {
@@ -78,13 +79,15 @@ export const router = createRouter({
     ...Object.entries(directory).map(([slug, title]) => ({
       path: '/' + slug,
       component:
-        slug === 'configurador'
-          ? configurator
-          : slug === 'colecciones'
-            ? collectionView
-            : catalogPages.includes(slug)
-              ? catalog
-              : page,
+        slug === 'piezas-unicas'
+          ? piecesView
+          : slug === 'configurador'
+            ? configurator
+            : slug === 'colecciones'
+              ? collectionView
+              : catalogPages.includes(slug)
+                ? catalog
+                : page,
       meta: { title },
     })),
     ...detailRoutes.map((item) => ({
@@ -112,8 +115,11 @@ export const router = createRouter({
     })),
     {
       path: '/piezas-unicas/:slug',
-      component: page,
-      meta: { title: 'Pieza no encontrada', notFound: true },
+      component: piecesView,
+      meta: {
+        title: 'Pieza única',
+        description: 'Estudios conceptuales de madera en Naturea Studio.',
+      },
     },
     {
       path: '/:pathMatch(.*)*',
