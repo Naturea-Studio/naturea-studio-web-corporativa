@@ -2,7 +2,7 @@
 import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { ChevronDown, Heart, Menu, Search, ShoppingBag, UserRound, X } from 'lucide-vue-next'
-import { categories, collections, images } from '../data'
+import { categories, collections, conceptProducts, images } from '../data'
 import EditorialImage from './EditorialImage.vue'
 const route = useRoute()
 const expanded = ref('')
@@ -19,7 +19,11 @@ const nav = [
     title: section === 'mobiliario' ? 'Mobiliario' : 'Decoración',
     path: '/' + section,
     items: categories
-      .filter((item) => item.section === section)
+      .filter(
+        (item) =>
+          item.section === section &&
+          conceptProducts.some((product) => product.category === item.id),
+      )
       .map((item) => ({ title: item.name, path: '/' + section + '/' + item.slug })),
     image: section === 'mobiliario' ? images.coffee : images.tray,
   })),

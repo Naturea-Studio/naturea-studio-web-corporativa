@@ -9,6 +9,22 @@ import type {
 } from './types'
 export const visual = (key: string, alt: string): ProductImage => ({ key, alt, conceptual: true })
 export const images = {
+  nest: visual('mesas-nido-de-roble', 'Dos mesas nido de roble en un interior de piedra clara'),
+  bedside: visual(
+    'mesita-de-noche-de-roble',
+    'Mesita de noche de roble con un cajón y cuatro patas cortas',
+  ),
+  bench: visual('banco-de-roble', 'Banco de roble sin respaldo con dos apoyos de madera'),
+  relief: visual('cuadro-relieve-de-nogal', 'Panel mural de nogal tallado con ondas'),
+  mirror: visual(
+    'espejo-con-marco-de-roble',
+    'Espejo vertical con marco de roble y esquinas redondeadas',
+  ),
+  lamp: visual(
+    'lampara-de-sobremesa-de-nogal',
+    'Lámpara conceptual con base de nogal y pantalla de lino',
+  ),
+  sculpture: visual('escultura-de-nogal', 'Escultura de sobremesa formada por dos curvas de nogal'),
   riverDining: visual(
     'river-comedor',
     'Mesa de comedor de tres tablas de nogal unidas por dos cauces de resina azul petróleo sobre patas de acero negro',
@@ -262,6 +278,70 @@ export const conceptProducts: Product[] = [
     images.desk,
     undefined,
     'personalizado',
+  ),
+
+  concept(
+    'mesas-nido-de-roble',
+    'Mesas nido de roble',
+    'Dos mesas de roble de distinta altura que se pueden colocar juntas o separar.',
+    'mesas-nido',
+    'essence',
+    'roble',
+    images.nest,
+  ),
+  concept(
+    'mesita-de-noche-de-roble',
+    'Mesita de noche de roble',
+    'Un cajón con tirador integrado guarda lo que se quiere tener a mano junto a la cama.',
+    'mesitas-de-noche',
+    'essence',
+    'roble',
+    images.bedside,
+  ),
+  concept(
+    'banco-de-roble',
+    'Banco de roble',
+    'Una tabla continua sobre dos apoyos para el recibidor.',
+    'bancos',
+    'essence',
+    'roble',
+    images.bench,
+  ),
+  concept(
+    'cuadro-relieve-de-nogal',
+    'Cuadro en relieve de nogal',
+    'Un panel de nogal tallado en ondas que cambian de sombra con la luz.',
+    'cuadros',
+    'organic',
+    'nogal',
+    images.relief,
+  ),
+  concept(
+    'espejo-con-marco-de-roble',
+    'Espejo con marco de roble',
+    'Un marco de roble con esquinas redondeadas enmarca un espejo vertical.',
+    'espejos',
+    'essence',
+    'roble',
+    images.mirror,
+  ),
+  concept(
+    'lampara-de-sobremesa-de-nogal',
+    'Lámpara de sobremesa de nogal',
+    'Una base de nogal de perfil curvo y una pantalla de lino como estudio de iluminación.',
+    'iluminacion',
+    'signature',
+    'nogal',
+    images.lamp,
+  ),
+  concept(
+    'escultura-de-nogal',
+    'Escultura de nogal',
+    'Dos formas curvas de nogal se cruzan en una pieza de sobremesa.',
+    'objetos-decorativos',
+    'organic',
+    'nogal',
+    images.sculpture,
   ),
 ]
 export const materials: Material[] = [

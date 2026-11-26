@@ -8,6 +8,45 @@ type ProductStudy = {
   detailImage?: ProductImage
 }
 export const studies: Partial<Record<string, ProductStudy>> = {
+  'mesas-nido-de-roble': {
+    intent: 'Dos mesas de roble de distinta altura que se pueden colocar juntas o separar.',
+    pending:
+      'Probar la holgura al encajar las mesas, la estabilidad de cada una y cómo se protegen juntas en el envío.',
+    details: [],
+  },
+  'mesita-de-noche-de-roble': {
+    intent: 'Un cajón con tirador integrado guarda lo que se quiere tener a mano junto a la cama.',
+    pending:
+      'Validar las guías del cajón, las tolerancias de la madera y la estabilidad con el cajón abierto.',
+    details: [],
+  },
+  'banco-de-roble': {
+    intent: 'Una tabla continua sobre dos apoyos para el recibidor.',
+    pending: 'Ensayar uniones, estabilidad y resistencia antes de ofrecerlo como asiento.',
+    details: [],
+  },
+  'cuadro-relieve-de-nogal': {
+    intent: 'Un panel de nogal tallado en ondas que cambian de sombra con la luz.',
+    pending:
+      'Definir el sistema de fijación, el peso y la protección de los relieves para transporte.',
+    details: [],
+  },
+  'espejo-con-marco-de-roble': {
+    intent: 'Un marco de roble con esquinas redondeadas enmarca un espejo vertical.',
+    pending: 'Validar la retención del cristal, la fijación mural y el embalaje contra impactos.',
+    details: [],
+  },
+  'lampara-de-sobremesa-de-nogal': {
+    intent: 'Una base de nogal de perfil curvo y una pantalla de lino como estudio de iluminación.',
+    pending:
+      'Seleccionar componentes y validar seguridad eléctrica y térmica del conjunto antes de ofrecerla.',
+    details: [],
+  },
+  'escultura-de-nogal': {
+    intent: 'Dos formas curvas de nogal se cruzan en una pieza de sobremesa.',
+    pending: 'Probar el ensamblaje, el apoyo y la inmovilización de la pieza en su caja.',
+    details: [],
+  },
   'posavasos-de-nogal': {
     intent: 'Repetir un contorno con retales aptos y conservar el dibujo de la veta en cada pieza.',
     pending: 'Espesor, planitud, respuesta a la humedad y embalaje.',
