@@ -49,8 +49,9 @@ function documentFor(order: TestOrder) {
       <div v-if="shop.lines.length" class="feature-panel">
         <h2>Tu selección de prueba</h2>
         <div v-for="line in shop.lines" :key="line.id" class="demo-line">
-          <RouterLink :to="'/productos/' + line.id">{{ line.name }}</RouterLink
-          ><span>{{ money(line.unit * line.quantity) }}</span
+          <RouterLink :to="'/productos/' + line.id">{{ line.name }}</RouterLink><span>{{
+            money(line.unit * line.quantity)
+          }}</span
           ><label
             >Cantidad de {{ line.name
             }}<input
@@ -102,7 +103,8 @@ function documentFor(order: TestOrder) {
       ><div class="page-links">
         <RouterLink class="text-link" to="/cuenta/pedidos">Ver pedidos simulados</RouterLink
         ><RouterLink class="text-link" to="/cuenta/facturas">Ver justificantes de prueba</RouterLink
-        ><RouterLink class="text-link" to="/favoritos">Ver favoritos</RouterLink>
+        ><RouterLink class="text-link" to="/favoritos">Ver favoritos</RouterLink
+        ><RouterLink class="text-link" to="/cuenta/proyectos">Ver proyectos guardados</RouterLink>
       </div></template
     >
     <template v-else>

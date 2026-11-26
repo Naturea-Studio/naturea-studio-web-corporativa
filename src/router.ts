@@ -5,6 +5,7 @@ const catalog = () => import('./catalog/Catalog.vue')
 const collectionView = () => import('./catalog/Collections.vue')
 const productView = () => import('./catalog/ProductDetail.vue')
 const catalogPages = ['productos', 'mobiliario', 'decoracion', 'buscar', 'favoritos']
+const professional = () => import('./features/Professional.vue')
 const commerce = () => import('./features/Commerce.vue')
 const commercePages = ['carrito', 'checkout', 'cuenta', 'cuenta/pedidos', 'cuenta/facturas']
 const piecesView = () => import('./features/Pieces.vue')
@@ -21,6 +22,7 @@ const directory = {
   'solicitar-presupuesto': 'Preparar una solicitud',
   inspiracion: 'Inspiración',
   profesionales: 'Profesionales',
+  'profesionales/mesa-de-trabajo': 'Mesa de trabajo',
   'profesionales/interioristas': 'Interioristas',
   'profesionales/arquitectos': 'Arquitectos',
   'profesionales/hosteleria': 'Hostelería',
@@ -80,17 +82,22 @@ export const router = createRouter({
     },
     ...Object.entries(directory).map(([slug, title]) => ({
       path: '/' + slug,
-      component: commercePages.includes(slug)
-        ? commerce
-        : slug === 'piezas-unicas'
-          ? piecesView
-          : slug === 'configurador'
-            ? configurator
-            : slug === 'colecciones'
-              ? collectionView
-              : catalogPages.includes(slug)
-                ? catalog
-                : page,
+      component:
+        slug === 'profesionales' ||
+        slug.startsWith('profesionales/') ||
+        ['cuenta/proyectos', 'cuenta/presupuestos'].includes(slug)
+          ? professional
+          : commercePages.includes(slug)
+            ? commerce
+            : slug === 'piezas-unicas'
+              ? piecesView
+              : slug === 'configurador'
+                ? configurator
+                : slug === 'colecciones'
+                  ? collectionView
+                  : catalogPages.includes(slug)
+                    ? catalog
+                    : page,
       meta: { title },
     })),
     ...detailRoutes.map((item) => ({

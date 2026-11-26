@@ -64,3 +64,29 @@
 .demo-line > a {
   flex: 1 1 12rem;
 }
+.sample-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  gap: 0.75rem;
+}
+.sample-picker label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+.sample-picker input {
+  width: auto;
+  min-height: auto;
+}
+.sample-picker span {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #0002;
+}
+.feature-notes {
+  display: grid;
+  gap: 0.35rem;
+  margin-block: 1rem;
+}
