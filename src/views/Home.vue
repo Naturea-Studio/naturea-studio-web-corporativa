@@ -89,15 +89,18 @@ import StoryCard from '../components/StoryCard.vue'
     </section>
 
     <section class="studio-project">
-      <EditorialImage :image="images.hero" caption />
+      <EditorialImage :image="images.riverDining" caption />
       <div>
-        <p class="eyebrow">Mobiliario a medida</p>
-        <h2>Una mesa que empieza por tu espacio.</h2>
+        <p class="eyebrow">River · Mesas a medida</p>
+        <h2>El río sigue el canto de la madera.</h2>
         <p>
-          Explora la forma del tablero, sus proporciones y los materiales antes de preparar un
-          proyecto.
+          Dos o tres tablas de canto vivo forman el tablero. La resina rellena el espacio entre
+          ellas y deja visible su contorno.
         </p>
-        <RouterLink class="text-link" to="/configurador">Explorar el configurador</RouterLink>
+        <div class="hero-links">
+          <RouterLink class="text-link" to="/colecciones/river">Ver la colección River</RouterLink
+          ><RouterLink class="text-link" to="/configurador">Explorar el configurador</RouterLink>
+        </div>
       </div>
     </section>
   </div>

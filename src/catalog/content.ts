@@ -92,13 +92,13 @@ export const studies: Partial<Record<string, ProductStudy>> = {
   },
   'mesa-de-comedor': {
     intent:
-      'El tablero ovalado suaviza los recorridos. Dos apoyos de nogal permiten estudiar distintas configuraciones de asiento.',
+      'Tres tablas de nogal forman dos cauces de resina azul. El recorte irregular conserva la silueta de los cantos vivos.',
     pending: 'Medidas, separación de apoyos y viabilidad estructural para cada proyecto.',
     details: [
-      ['Forma', 'Ovalada'],
-      ['Estructura de estudio', 'Dos apoyos de nogal'],
+      ['Forma', 'Rectangular con canto vivo'],
+      ['Composición', 'Tres tablas de nogal, resina azul petróleo y base de acero negro'],
     ],
-    detailImage: images.walnut,
+    detailImage: images.riverBlue,
   },
   escritorio: {
     intent:
@@ -112,7 +112,7 @@ export const studies: Partial<Record<string, ProductStudy>> = {
   },
   'mesa-de-centro-river': {
     intent:
-      'Una línea negra estrecha une dos bordes de nogal y sigue el dibujo natural del tablero.',
+      'La resina negra rellena el hueco entre dos tablas de nogal y conserva la forma irregular de sus cantos.',
     pending: 'Geometría del encuentro, proporciones, acabado y comportamiento de la unión.',
     details: [
       ['Forma', 'Ovalada'],
@@ -132,10 +132,10 @@ export const collectionStories = [
   },
   {
     id: 'river',
-    line: 'Una línea entre dos vetas',
-    text: 'El cauce sigue el encuentro entre dos tablas. La colección explora la resina como un detalle de unión, con variaciones de profundidad y contraste.',
+    line: 'El cauce toma la forma de la madera',
+    text: 'Se colocan dos o tres tablas con los cantos vivos enfrentados. La resina rellena los huecos a ras del tablero. Negro mate y azul petróleo son referencias de contraste. El tono, la transparencia y el dibujo se estudian para cada encargo.',
     materialIds: ['nogal', 'resina'],
-    image: images.resin,
+    image: images.riverBlue,
     tone: 'river',
   },
   {

@@ -9,7 +9,9 @@ const model = computed(() => models[study.model])
 const issues = computed(() => validateStudy(study))
 const visual = computed(() =>
   study.resin !== 'sin-resina'
-    ? images.river
+    ? study.model === 'centro'
+      ? images.river
+      : images.riverDining
     : study.model === 'centro'
       ? images.coffee
       : images.hero,
@@ -30,7 +32,11 @@ const summary = computed(() =>
 const options = [
   { key: 'shape', name: 'Forma', items: ['ovalada', 'rectangular'] },
   { key: 'wood', name: 'Madera', items: ['roble', 'nogal', 'olivo'] },
-  { key: 'resin', name: 'Resina', items: ['sin-resina', 'negra mate', 'ahumada', 'transparente'] },
+  {
+    key: 'resin',
+    name: 'Resina',
+    items: ['sin-resina', 'negra mate', 'azul petróleo', 'ahumada', 'transparente'],
+  },
   { key: 'legs', name: 'Patas', items: ['madera', 'acero negro'] },
   { key: 'finish', name: 'Acabado', items: ['mate', 'satinado', 'aceite natural'] },
   { key: 'extra', name: 'Opciones adicionales', items: ['sin extras', 'pasacables'] },
@@ -61,7 +67,8 @@ function changeModel() {
       <div>
         <EditorialImage class="feature-image" :image="visual" priority caption />
         <p class="feature-muted">
-          Referencia visual de la familia de diseño. La imagen ilustra materiales y ambiente.
+          Referencia visual de la familia de diseño. El render muestra un ejemplo de la familia, con
+          su propio color, madera y forma.
         </p>
         <TablePlan v-if="!issues.length" :study="study" />
       </div>

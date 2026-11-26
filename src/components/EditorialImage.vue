@@ -7,16 +7,20 @@ defineProps<{ image: ProductImage; priority?: boolean; caption?: boolean }>()
     <img
       :src="'/images/' + image.key + '.webp'"
       :srcset="
-        ['hero', 'river'].includes(image.key)
+        ['hero', 'river', 'river-comedor'].includes(image.key)
           ? `/images/${image.key}-small.webp 768w, /images/${image.key}.webp 1536w`
           : undefined
       "
-      :sizes="['hero', 'river'].includes(image.key) ? '(min-width: 850px) 60vw, 100vw' : undefined"
+      :sizes="
+        ['hero', 'river', 'river-comedor'].includes(image.key)
+          ? '(min-width: 850px) 60vw, 100vw'
+          : undefined
+      "
       :alt="image.alt"
       :loading="priority ? 'eager' : 'lazy'"
       :fetchpriority="priority ? 'high' : 'auto'"
-      :width="['hero', 'river'].includes(image.key) ? 1536 : 354"
-      :height="['hero', 'river'].includes(image.key) ? 1024 : 354"
+      :width="['hero', 'river', 'river-comedor'].includes(image.key) ? 1536 : 354"
+      :height="['hero', 'river', 'river-comedor'].includes(image.key) ? 1024 : 354"
     />
     <figcaption v-if="caption && image.conceptual">Imagen conceptual</figcaption>
   </figure>

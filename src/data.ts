@@ -9,6 +9,17 @@ import type {
 } from './types'
 export const visual = (key: string, alt: string): ProductImage => ({ key, alt, conceptual: true })
 export const images = {
+  riverDining: visual(
+    'river-comedor',
+    'Mesa de comedor de tres tablas de nogal unidas por dos cauces de resina azul petróleo sobre patas de acero negro',
+  ),
+  riverBlue: visual(
+    'river-azul-detalle',
+    'Resina azul petróleo entre los cantos vivos de dos tablas de nogal',
+  ),
+  coasters: visual('posavasos', 'Posavasos redondos de nogal sobre piedra clara'),
+  bookends: visual('sujetalibros', 'Dos sujetalibros angulares de nogal'),
+  console: visual('consola', 'Consola de roble con estructura de acero negro'),
   river: visual('river', 'Mesa de centro ovalada de nogal con una veta de resina negra'),
   walnut: visual('walnut', 'Veta natural de nogal'),
   steel: visual('steel', 'Estructura de acero negro mate'),
@@ -40,8 +51,9 @@ export const collections: ProductCollection[] = [
     id: 'river',
     slug: 'river',
     name: 'River',
-    description: 'La resina dibuja un cauce entre las vetas de la madera.',
-    image: images.river,
+    description:
+      'Dos o tres tablas de canto vivo forman un tablero. La resina llena los huecos y dibuja uno o varios cauces.',
+    image: images.riverDining,
   },
   {
     id: 'organic',
@@ -147,6 +159,7 @@ export const conceptProducts: Product[] = [
     'posavasos',
     'organic',
     'nogal',
+    images.coasters,
   ),
   concept(
     'sujetalibros-de-nogal',
@@ -155,6 +168,7 @@ export const conceptProducts: Product[] = [
     'sujetalibros',
     'signature',
     'nogal',
+    images.bookends,
   ),
   concept(
     'reloj-de-pared',
@@ -200,7 +214,7 @@ export const conceptProducts: Product[] = [
     ...concept(
       'mesa-de-centro-river',
       'Mesa de centro River',
-      'Un tablero ovalado de nogal atravesado por un cauce estrecho de resina negra mate.',
+      'Dos tablas de nogal con cantos irregulares forman un tablero ovalado. La resina negra mate llena el hueco central.',
       'mesas-de-centro',
       'river',
       'nogal',
@@ -218,23 +232,26 @@ export const conceptProducts: Product[] = [
       'consolas',
       'essence',
       'roble',
-      undefined,
+      images.console,
       undefined,
       'personalizado',
     ),
     materialIds: ['roble', 'metal'],
   },
-  concept(
-    'mesa-de-comedor',
-    'Mesa de comedor',
-    'Una mesa de nogal de proporciones generosas, pensada para explorar medidas a pedido.',
-    'mesas-de-comedor',
-    'signature',
-    'nogal',
-    images.hero,
-    undefined,
-    'personalizado',
-  ),
+  {
+    ...concept(
+      'mesa-de-comedor',
+      'Mesa de comedor River',
+      'Tres tablas de nogal de canto vivo forman el tablero. Dos cauces de resina azul petróleo recorren los huecos sobre una base de acero negro.',
+      'mesas-de-comedor',
+      'river',
+      'nogal',
+      images.riverDining,
+      undefined,
+      'personalizado',
+    ),
+    materialIds: ['nogal', 'resina', 'metal'],
+  },
   concept(
     'escritorio',
     'Escritorio',

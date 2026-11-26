@@ -14,7 +14,7 @@ Toda la gama está en estudio. La banda de precio de la bandeja es una hipótesi
 |     8 | Mesa de centro           | Organic   | Comparte criterio de selección de nogal y acabado, pero requiere tabla mayor, uniones y validación de estabilidad. Cotizar transporte según peso y volumen reales.                                  |
 |     9 | Mesa de centro River     | River     | Estudio por encargo. Añade moldeo, curado y acabado de la unión de nogal con resina. Probar cupones antes de fabricar un tablero.                                                                   |
 |    10 | Consola de roble y acero | Essence   | Estudio por encargo. Comprar o subcontratar estructura; definir uniones, estabilidad y montaje. Comprobar protección del metal y de los cantos por separado.                                        |
-|    11 | Mesa de comedor          | Signature | Estudio por encargo. Revisar pasos de puerta, acceso de entrega, montaje y base concreta.                                                                                                           |
+|    11 | Mesa de comedor River    | River     | Estudio por encargo. Revisar pasos de puerta, acceso de entrega, montaje y base concreta.                                                                                                           |
 |    12 | Escritorio               | Signature | Estudio por encargo. Añade almacenaje, herrajes y tolerancias. Revisar necesidades y transporte por caso.                                                                                           |
 
 ## Criterios para avanzar
