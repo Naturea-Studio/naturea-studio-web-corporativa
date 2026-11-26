@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import { ChevronLeft, ChevronRight, Heart } from 'lucide-vue-next'
 import { collections, categories, priceLabel } from '../data'
 import { useFavorites } from '../stores'
+import { useCommerce } from '../features/commerce'
 import type { Product } from '../types'
 import { materialsFor, relatedProducts, studies } from './content'
 import EditorialImage from '../components/EditorialImage.vue'
@@ -10,6 +11,10 @@ import ProductCard from '../components/ProductCard.vue'
 const props = defineProps<{ product: Product }>()
 const index = ref(0)
 const favorites = useFavorites()
+const commerce = useCommerce()
+const quantity = computed(
+  () => commerce.lines.find((line) => line.id === props.product.id)?.quantity ?? 0,
+)
 const study = computed(() => studies[props.product.id])
 const collection = computed(() => collections.find((item) => item.id === props.product.collection))
 const category = computed(() => categories.find((item) => item.id === props.product.category))
@@ -120,6 +125,18 @@ function move(distance: number) {
             class="text-link"
             to="/a-medida"
             >Explorar a medida</RouterLink
+          >
+        </div>
+        <div v-if="product.price" class="page-links">
+          <button
+            class="text-link"
+            type="button"
+            :disabled="quantity >= 9"
+            @click="commerce.set(product.id, quantity + 1)"
+          >
+            Añadir al carrito de prueba</button
+          ><RouterLink v-if="quantity" class="text-link" to="/carrito"
+            >Ver carrito ({{ quantity }})</RouterLink
           >
         </div>
         <p class="concept-note">Diseño en desarrollo · Sin disponibilidad para compra.</p>

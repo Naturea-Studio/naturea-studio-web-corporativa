@@ -5,6 +5,8 @@ const catalog = () => import('./catalog/Catalog.vue')
 const collectionView = () => import('./catalog/Collections.vue')
 const productView = () => import('./catalog/ProductDetail.vue')
 const catalogPages = ['productos', 'mobiliario', 'decoracion', 'buscar', 'favoritos']
+const commerce = () => import('./features/Commerce.vue')
+const commercePages = ['carrito', 'checkout', 'cuenta', 'cuenta/pedidos', 'cuenta/facturas']
 const piecesView = () => import('./features/Pieces.vue')
 const configurator = () => import('./features/Configurator.vue')
 const page = () => import('./views/Page.vue')
@@ -78,8 +80,9 @@ export const router = createRouter({
     },
     ...Object.entries(directory).map(([slug, title]) => ({
       path: '/' + slug,
-      component:
-        slug === 'piezas-unicas'
+      component: commercePages.includes(slug)
+        ? commerce
+        : slug === 'piezas-unicas'
           ? piecesView
           : slug === 'configurador'
             ? configurator

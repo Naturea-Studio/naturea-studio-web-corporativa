@@ -65,8 +65,9 @@ function toggle(id: string) {
             >
               {{
                 interest.includes(piece.slug) ? 'Quitar de mi selección' : 'Guardar en mi selección'
-              }}</button
-            ><span v-if="!writable" role="status">Selección disponible durante esta visita.</span>
+              }}</button><span v-if="!writable" role="status"
+              >Selección disponible durante esta visita.</span
+            >
           </div>
         </div>
       </div>
