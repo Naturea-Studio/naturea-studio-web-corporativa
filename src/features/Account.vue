@@ -104,6 +104,7 @@ async function signOut() {
     <p v-else-if="!accountReady" role="status">Comprobando sesión…</p>
     <section v-else-if="session && !changing" class="feature-panel">
       <h2>Tu cuenta</h2>
+      <RouterLink class="text-link" to="/reservas">Gestionar reservas</RouterLink>
       <p>{{ session.user.email }}</p>
       <div class="hero-links">
         <button type="button" class="button" :disabled="busy" @click="signOut">
@@ -175,8 +176,7 @@ async function signOut() {
                     : mode === 'signup'
                       ? 'Crear cuenta'
                       : 'Iniciar sesión'
-            }}</button
-          ><RouterLink v-if="changing" class="text-link" to="/cuenta"
+            }}</button><RouterLink v-if="changing" class="text-link" to="/cuenta"
             >Volver a Mi cuenta</RouterLink
           >
         </div>

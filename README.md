@@ -29,9 +29,10 @@ La demo incluye configurador, galería conceptual, simulación de pedidos, mesa 
 
 ## Documentación
 
+- [Checklist de apertura y backend de pruebas](docs/STORE-LAUNCH.md).
+
 - [Proyecto](docs/PROJECT.md), [negocio](docs/BUSINESS.md), [mercado](docs/MARKET.md) y [marca](docs/BRAND.md).
 - [Arquitectura](docs/ARCHITECTURE.md), [sistema de diseño](docs/DESIGN-SYSTEM.md) y [decisiones](docs/DECISIONS.md).
 - [Catálogo](docs/CATALOG.md), [colecciones](docs/COLLECTIONS.md) y [materiales](docs/MATERIALS.md).
 - [Configurador y proyectos](docs/CONFIGURATOR.md), [piezas únicas](docs/UNIQUE-PIECES.md) y [profesionales](docs/PROFESSIONAL.md).
 - [Roadmap](docs/ROADMAP.md), [ecommerce de prueba](docs/COMMERCE.md), [operaciones](docs/OPERATIONS.md) y [expansión](docs/EXPANSION.md).
-

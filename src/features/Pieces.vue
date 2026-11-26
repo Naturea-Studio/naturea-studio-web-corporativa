@@ -88,6 +88,9 @@ function toggle(id: string) {
         </p>
       </header>
       <div class="page-links catalog-summary" aria-label="Etapa de los estudios">
+        <RouterLink class="text-link" to="/reservas"
+          >Consultar reservas de piezas físicas</RouterLink
+        >
         <button class="text-link" type="button" :aria-pressed="!archive" @click="archive = false">
           Estudios actuales</button
         ><button class="text-link" type="button" :aria-pressed="archive" @click="archive = true">

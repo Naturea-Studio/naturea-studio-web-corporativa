@@ -10,6 +10,7 @@ const professional = () => import('./features/Professional.vue')
 const account = () => import('./features/Account.vue')
 const commerce = () => import('./features/Commerce.vue')
 const commercePages = ['carrito', 'checkout', 'cuenta/pedidos', 'cuenta/facturas']
+const reservations = () => import('./features/Reservations.vue')
 const piecesView = () => import('./features/Pieces.vue')
 const configurator = () => import('./features/Configurator.vue')
 const page = () => import('./views/Page.vue')
@@ -19,6 +20,7 @@ const directory = {
   decoracion: 'Decoración',
   productos: 'Catálogo',
   'piezas-unicas': 'Piezas únicas',
+  reservas: 'Reservas',
   'a-medida': 'Proyectos a medida',
   configurador: 'Configurador',
   'solicitar-presupuesto': 'Preparar una solicitud',
@@ -87,25 +89,27 @@ export const router = createRouter({
     ...Object.entries(directory).map(([slug, title]) => ({
       path: '/' + slug,
       component:
-        slug === 'cuenta' || slug === 'cuenta/recuperar'
-          ? account
-          : slug === 'internacional'
-            ? international
-            : slug === 'profesionales' ||
-                slug.startsWith('profesionales/') ||
-                ['cuenta/proyectos', 'cuenta/presupuestos'].includes(slug)
-              ? professional
-              : commercePages.includes(slug)
-                ? commerce
-                : slug === 'piezas-unicas'
-                  ? piecesView
-                  : slug === 'configurador'
-                    ? configurator
-                    : slug === 'colecciones'
-                      ? collectionView
-                      : catalogPages.includes(slug)
-                        ? catalog
-                        : page,
+        slug === 'reservas'
+          ? reservations
+          : slug === 'cuenta' || slug === 'cuenta/recuperar'
+            ? account
+            : slug === 'internacional'
+              ? international
+              : slug === 'profesionales' ||
+                  slug.startsWith('profesionales/') ||
+                  ['cuenta/proyectos', 'cuenta/presupuestos'].includes(slug)
+                ? professional
+                : commercePages.includes(slug)
+                  ? commerce
+                  : slug === 'piezas-unicas'
+                    ? piecesView
+                    : slug === 'configurador'
+                      ? configurator
+                      : slug === 'colecciones'
+                        ? collectionView
+                        : catalogPages.includes(slug)
+                          ? catalog
+                          : page,
       meta: { title },
     })),
     ...detailRoutes.map((item) => ({
