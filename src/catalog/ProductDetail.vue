@@ -8,6 +8,7 @@ import type { Product } from '../types'
 import { materialsFor, relatedProducts, studies } from './content'
 import EditorialImage from '../components/EditorialImage.vue'
 import ProductCard from '../components/ProductCard.vue'
+import TrayStudy from './TrayStudy.vue'
 const props = defineProps<{ product: Product }>()
 const index = ref(0)
 const favorites = useFavorites()
@@ -15,6 +16,7 @@ const commerce = useCommerce()
 const quantity = computed(
   () => commerce.lines.find((line) => line.id === props.product.id)?.quantity ?? 0,
 )
+const isTray = computed(() => props.product.slug === 'bandeja-decorativa')
 const study = computed(() => studies[props.product.id])
 const collection = computed(() => collections.find((item) => item.id === props.product.collection))
 const category = computed(() => categories.find((item) => item.id === props.product.category))
@@ -111,6 +113,7 @@ function move(distance: number) {
           </div>
         </div>
         <div class="hero-links">
+          <a v-if="isTray" class="button" href="#bandeja-en-tu-espacio">Probar en mi espacio</a>
           <button
             class="button"
             type="button"
@@ -127,7 +130,7 @@ function move(distance: number) {
             >Explorar a medida</RouterLink
           >
         </div>
-        <div v-if="product.price" class="page-links">
+        <div v-if="product.price && !isTray" class="page-links">
           <button
             class="text-link"
             type="button"
@@ -142,6 +145,7 @@ function move(distance: number) {
         <p class="concept-note">Diseño en desarrollo · Sin disponibilidad para compra.</p>
       </div>
     </div>
+    <TrayStudy v-if="isTray" />
     <section class="product-study">
       <div>
         <p class="eyebrow">Notas de diseño</p>

@@ -135,7 +135,7 @@ export const conceptProducts = [
     'organic',
     'nogal',
     images.tray,
-    69,
+    99,
   ),
   concept(
     'reloj-de-pared',
