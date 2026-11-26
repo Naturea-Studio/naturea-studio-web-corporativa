@@ -1,0 +1,10 @@
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import '@fontsource-variable/manrope/wght.css'
+import '@fontsource-variable/cormorant-garamond/wght.css'
+import '@fontsource-variable/cormorant-garamond/wght-italic.css'
+import './styles.css'
+import './catalog/catalog.css'
+import App from './App.vue'
+import { router } from './router'
+createApp(App).use(createPinia()).use(router).mount('#app')
